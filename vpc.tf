@@ -98,7 +98,7 @@ resource "aws_route_table" "Private_Route" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "${aws_internet_gateway.ECS_Nat.id}"
+    gateway_id = "${aws_nat_gateway.ECS_Nat.id}"
   }
 
   tags = {
@@ -121,7 +121,7 @@ resource "aws_route_table_association" "ECS_Public2_association" {
 #################################### Private Route Table Associations #####################################
 
 resource "aws_route_table_association" "ECS_Private1_association" {
-  subnet_id      = "${aws_subnet.ECS_Private2.id}"
+  subnet_id      = "${aws_subnet.ECS_Private1.id}"
   route_table_id = "${aws_route_table.Private_Route.id}"
 }
 
