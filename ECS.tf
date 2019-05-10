@@ -42,8 +42,8 @@ EOF
 
 resource "aws_autoscaling_group" "public-autoscaling-group" {
   name                 = "public-autoscaling-group"
-  max_size             = "3"
-  min_size             = "1"
+  max_size             = "10"
+  min_size             = "2"
   desired_capacity     = "2"
   vpc_zone_identifier  = ["${aws_subnet.ECS_Private1.id}", "${aws_subnet.ECS_Private2.id}"]
   launch_configuration = "${aws_launch_configuration.webserver-ecs-launch-configuration.name}"
