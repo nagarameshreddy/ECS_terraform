@@ -106,7 +106,7 @@ resource "aws_route_table" "Private_Route" {
   }
 }
 
-##################################### Public Route Table Associations #####################################
+################################### Public Route Table Associations #####################################
 
 resource "aws_route_table_association" "ECS_Public1_association" {
   subnet_id      = "${aws_subnet.ECS_Public1.id}"
@@ -118,7 +118,7 @@ resource "aws_route_table_association" "ECS_Public2_association" {
   route_table_id = "${aws_route_table.Public_Route.id}"
 }
 
-#################################### Private Route Table Associations #####################################
+################################## Private Route Table Associations #####################################
 
 resource "aws_route_table_association" "ECS_Private1_association" {
   subnet_id      = "${aws_subnet.ECS_Private1.id}"
