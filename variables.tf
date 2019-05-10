@@ -14,15 +14,15 @@ variable "aws_secret_key" {
 variable "region" {
   type        = "string"
   description = "AWS Region"
-  default     = "us-east-1"
+ # default     = "us-east-1"
 }
 
 variable "az1" {
 	type = "string"
-	default ="us-east-1a"
+#	default ="us-east-1a"
 }
 
 variable "az2" {
 	type = "string"
-	default ="us-east-1b"
+#	default ="us-east-1b"
 }
